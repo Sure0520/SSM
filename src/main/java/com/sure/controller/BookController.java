@@ -25,7 +25,7 @@ public class BookController {
     @RequestMapping("/allBook")
     public String list(Model model){
         List<Books> books = bookService.queryAllBook();
-
+        System.out.println("-------------页面跳转");
         model.addAttribute("list",books);
         return "allBook";
     }
